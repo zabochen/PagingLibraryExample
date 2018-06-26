@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         val pagedList: PagedList<User> = PagedList.Builder(userDataSource, pagedListConfig)
                 .setNotifyExecutor(MainThreadExecutor())
                 .setFetchExecutor(Executors.newSingleThreadExecutor())
+                .setInitialKey(50)
                 .build()
 
 
